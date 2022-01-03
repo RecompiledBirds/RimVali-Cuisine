@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef Name="RimvaliCookMealBase" ParentName="CookMealBase" Abstract="True">
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+
+<!-- Taco -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>AvaliTacoRecipe</defName>
+    <label>Make avali tacos (2)</label>
+    <description>Make some avali tacos! (2)</description>
+    <jobString>Cooking avali tacos. (2)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.75</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+        <li>PiruFlour</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <AvaliTaco>2</AvaliTaco>
+    </products>
+  </RecipeDef>
+
+
+<!-- Pizza -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>AvaliPizzaRecipe</defName>
+    <label>Bake and cut an avali pizza (6)</label>
+    <description>Bake and cut an avali pizza! (6)</description>
+    <jobString>Baking an avali pizza. (6)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>1.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+        <li>PiruFlour</li>
+        <li>Milk</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <AvaliPizza>6</AvaliPizza>
+    </products>
+  </RecipeDef>
+  
+  
+  <!-- Cookies -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>AvaliCookieRecipe</defName>
+    <label>Bake avali chocolate cookies (8)</label>
+    <description>Bake avali chocolate cookies. (8)</description>
+    <jobString>Baking avali chocolate cookies. (8)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chocolate</li>
+          </thingDefs>
+        </filter>
+        <count>0.4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <AvaliCookie>8</AvaliCookie>
+    </products>
+  </RecipeDef>
+  
+  
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>AvaliCookieRecipeFruit</defName>
+    <label>Bake avali kiri cookies (5)</label>
+    <description>Bake avali kiri cookies. (5)</description>
+    <jobString>Baking avali kiri cookies. (5)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawKiri</li>
+          </thingDefs>
+        </filter>
+        <count>0.2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <AvaliCookie>5</AvaliCookie>
+    </products>
+  </RecipeDef>
+  
+  
+  <!-- Piru noodles -->
+   <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>MakePiruNoodles</defName>
+    <label>Cook piru noodles (3)</label>
+    <description>Cook avali noodles. (3)</description>
+    <jobString>Cooking piru noodles. (3)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+        <li>PiruFlour</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <AvaliNoods>3</AvaliNoods>
+    </products>
+  </RecipeDef>
+  
+  
+<!-- Roast -->
+ <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>AvaliRoastRecipe</defName>
+    <label>Cook avali roast (2)</label>
+    <description>Cook an avali roast. (2)</description>
+    <jobString>Cooking an avali roast. (2)</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>1.75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawKiri</li>
+          </thingDefs>
+        </filter>
+        <count>0.3</count>
+      </li>
+    </ingredients>    
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+				<li>PlantFoodRaw</li>	
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <AvaliRoast>2</AvaliRoast>
+    </products>
+  </RecipeDef>
+  
+  
+<!-- Flatbread -->
+   <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>AvaliFlatbreadRecipe</defName>
+    <label>Bake piru flatbread (5)</label>
+    <description>Bake piru flatbread. (5)</description>
+    <jobString>Baking piru flatbread. (5)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>PiruFlour</li>
+            </thingDefs>
+          </filter>
+          <count>1.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <AvaliFlatbread>5</AvaliFlatbread>
+    </products>
+  </RecipeDef>
+  
+  
+<!-- StuffedOvoid -->
+   <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>StuffAnOvoidInIt</defName>
+    <label>Stuff nakati ovoids (3)</label>
+    <description>Stuff stuffed nakati ovoids. (3)</description>
+    <jobString>Stuffing nakati ovoids. (3)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>NakatiBark</li>
+            </thingDefs>
+          </filter>
+          <count>0.2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1.25</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+        <li>NakatiBark</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <StuffedOvoid>3</StuffedOvoid>
+    </products>
+  </RecipeDef>  
+
+
+<!-- RoastedNakatiBark -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>NakatiBarkRoastRecipe</defName>
+    <label>Roast nakati bark (6)</label>
+    <description>Roast nakati bark. (6)</description>
+    <jobString>Roasting nakati bark. (6)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>NakatiBark</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <NakatiBarkRoast>6</NakatiBarkRoast>
+    </products>
+  </RecipeDef> 
+  
+  
+<!-- StuffedKiri -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>StuffKiri</defName>
+    <label>Stuff kiri fruits (4)</label>
+    <description>Stuff kiri fruits. (4)</description>
+    <jobString>Stuffing kiri fruits. (4)</jobString>
+    <ingredients>
+       <li>
+          <filter>
+            <thingDefs>
+              <li>RawKiri</li>
+            </thingDefs>
+          </filter>
+          <count>0.2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1.75</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+        <li>RawKiri</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <StuffedKiri>4</StuffedKiri>
+    </products>
+  </RecipeDef> 
+  
+  
+<!-- Jerky -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>MakeAvaliJerky</defName>
+    <label>Dry avali jerky (15)</label>
+    <description>Dry avali jerky quickly. (15)</description>
+    <jobString>Dry avali jerky. (15)</jobString>
+    <ingredients>
+       <li>
+        <filter>
+          <thingDefs>
+            <li>NakatiBark</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>1.2</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+				<li>PlantFoodRaw</li>	
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <AvaliJerky>15</AvaliJerky>
+    </products>
+  </RecipeDef>
+  
+
+<!-- kiriLeather -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>MakeKiriLeather</defName>
+    <label>Dry kiri fruit leather (6)</label>
+    <description>Dry kiri fruit leather. (6)</description>
+    <jobString>Drying kiri fruit leather. (6)</jobString>
+    <ingredients>
+       <li>
+        <filter>
+          <thingDefs>
+            <li>RawKiri</li>
+          </thingDefs>
+        </filter>
+        <count>0.4</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter></fixedIngredientFilter>
+    <defaultIngredientFilter></defaultIngredientFilter>
+    <products>
+      <KiriLeather>6</KiriLeather>
+    </products>
+  </RecipeDef> 
+  
+  
+<!-- Stew -->
+  <RecipeDef ParentName="RimvaliCookMealBase">
+    <defName>MakeAvaliStew</defName>
+    <label>Cook avali stew</label>
+    <description>Cook avali stew.</description>
+    <jobString>Cooking avali stew.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PiruFlour</li>
+          </thingDefs>
+        </filter>
+        <count>0.3</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>Meat_RimVali</li>
+        <li>InsectJelly</li>
+        <li>PiruFlour</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <AvaliStew>1</AvaliStew>
+    </products>
+  </RecipeDef> 
+</Defs>

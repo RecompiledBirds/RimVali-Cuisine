@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <ResearchProjectDef>
+    <defName>ResearchAvaliCooking</defName>
+    <label>Avali cooking</label>
+    <description>This specialised cooking station contains all the tools needed to cook, and a database of avali recipies.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+	<researchViewY>1.45</researchViewY>
+
+
+    <requiredResearchBuilding>AvaliResearchBench</requiredResearchBuilding>
+    <tab>RimValiResearch</tab>
+    <prerequisites>
+			<li>BasicRimValiTech</li>
+		</prerequisites>
+  </ResearchProjectDef>
+</Defs>
